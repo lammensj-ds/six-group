@@ -6,6 +6,7 @@ package: Six Group
 core_version_requirement: ^10 || ^11
 libraries:
   - six_group/global
+  - six_group/tailwind
 
 regions:
   header: 'Header'

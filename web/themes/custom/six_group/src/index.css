@@ -1,0 +1,8 @@
+@import "tailwindcss" prefix(tw);
+@source "**/*.twig";
+
+@layer components {
+  .page-title {
+    @apply tw:bg-blue-500 tw:text-white;
+  }
+}

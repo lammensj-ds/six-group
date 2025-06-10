@@ -1,0 +1,7 @@
+pirate_weather.forecast:
+  path: '/pirate-weather/forecast'
+  defaults:
+    _title: 'Forecast'
+    _controller: '\Drupal\pirate_weather\Controller\PirateWeatherController'
+  requirements:
+    _permission: 'access content'

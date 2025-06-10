@@ -1,0 +1,5 @@
+name: 'Pirate Weather'
+type: module
+description: 'Show weather forecast based on location'
+package: Six Group
+core_version_requirement: ^10 || ^11

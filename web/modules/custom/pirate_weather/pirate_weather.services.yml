@@ -1,0 +1,4 @@
+services:
+  pirate_weather.services.forecast:
+    class: Drupal\pirate_weather\ForecastService
+    arguments: ['@http_client', '@logger.factory']

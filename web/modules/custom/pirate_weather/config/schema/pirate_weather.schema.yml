@@ -1,0 +1,10 @@
+block.settings.pirate_weather_weather_forecast:
+  type: block_settings
+  label: 'Weather Forecast block'
+  mapping:
+    latitude:
+      type: string
+      label: Latitude
+    longitude:
+      type: string
+      label: Longitude

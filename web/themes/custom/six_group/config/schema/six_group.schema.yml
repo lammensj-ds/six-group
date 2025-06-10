@@ -1,0 +1,8 @@
+# Schema for the configuration files of the Six Group theme.
+six_group.settings:
+  type: theme_settings
+  label: 'Six Group settings'
+  mapping:
+    example:
+      type: string
+      label: Example

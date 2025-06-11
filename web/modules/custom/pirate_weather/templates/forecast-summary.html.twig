@@ -1,0 +1,11 @@
+<div class="forecast">
+  <p>{{ 'Today, the weather is supposed to be @today_wmo, with a temperature of @today_temp @temp_unit.' | t({'@today_wmo': today_wmo | wmo_trans | lower, '@today_temp': today_temp, '@temp_unit': temp_unit}) }}</p>
+  <p>
+    {{ 'For the next upcoming days, we have' }}:
+    <ul>
+      {% for key,time in daily_time %}
+        <li>{{ time }}: {{ daily_wmo[key] | wmo_trans | lower }}. {{ 'Temperature' }}: {{ daily_temp_max[key] }} {{ temp_unit }}</li>
+      {% endfor %}
+    </ul>
+  </p>
+</div>

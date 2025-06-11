@@ -40,7 +40,7 @@ final class PirateWeatherController extends ControllerBase {
     }
 
     $build['content'] = [
-      '#theme' => 'forecast',
+      '#theme' => 'forecast_summary',
       '#today_temp' => $forecast['current']['temperature_2m'],
       '#today_wmo' => $forecast['current']['weather_code'],
       '#daily_time' => $forecast['daily']['time'],

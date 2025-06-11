@@ -2,3 +2,8 @@ services:
   pirate_weather.services.forecast:
     class: Drupal\pirate_weather\ForecastService
     arguments: ['@http_client', '@logger.factory']
+
+  pirate_weather.twig_extension:
+    class: Drupal\pirate_weather\TwigExtension\PirateWeatherTwigExtension
+    tags:
+      - { name: twig.extension }

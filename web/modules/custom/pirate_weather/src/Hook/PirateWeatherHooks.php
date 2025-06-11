@@ -15,7 +15,7 @@ class PirateWeatherHooks {
   #[Hook('theme')]
   public function theme(): array {
     return [
-      'forecast' => [
+      'forecast_summary' => [
         'variables' => [
           'today_temp' => '',
           'today_wmo' => '',

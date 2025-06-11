@@ -34,16 +34,19 @@ final class PirateWeatherController extends ControllerBase {
    * Builds the response.
    */
   public function __invoke(): array {
-    $forecast = $this->pirateWeatherForecast->getForecast('-20.859444', '-0.624444');
+    $forecast = $this->pirateWeatherForecast->getForecast('51.196', '4.408');
     if (empty($forecast)) {
       throw new NotFoundHttpException('Could not find weather forecast.');
     }
 
     $build['content'] = [
-      '#markup' => $this->t('Currently, the temperature is @temp @units', [
-        '@temp' => $forecast['current']['temperature_2m'],
-        '@units' => $forecast['current_units']['temperature_2m'],
-      ]),
+      '#theme' => 'forecast',
+      '#today_temp' => $forecast['current']['temperature_2m'],
+      '#today_wmo' => $forecast['current']['weather_code'],
+      '#daily_time' => $forecast['daily']['time'],
+      '#daily_wmo' => $forecast['daily']['weather_code'],
+      '#daily_temp_max' => $forecast['daily']['temperature_2m_max'],
+      '#temp_unit' => $forecast['current_units']['temperature_2m'],
     ];
 
     return $build;
